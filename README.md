@@ -2,11 +2,18 @@
 
 A repository tracking my Ruby formatting set up in VSCode
 
+# Summary
+
+I have Ruby, VSCode Ruby, Endwise, Prettier Ruby Plugin and RuboCop installed in VSCode.
+
+ I've added most of the recommended code from Ruby in settings.json but have chosen to set my Ruby default formatter to Prettier because I prefer its speed over RuboCop. RuboCop takes a full second to run and has **A LOT** of opinions - this is both helpful yet annoying. 
+
+I'm keeping it enabled so that I can use it as a learning tool but if the squigglies get overwhelming, you can disable it and Prettier seems to run fine even without making any changes to the global config.
+
 # TODO
 
 - Table of Contents with links to sections
-- Add Ruby Section
-- Add VSCode Ruby Section
+- Config RuboCop to ignore certain warnings
 
 # Installs
 
@@ -16,7 +23,7 @@ A repository tracking my Ruby formatting set up in VSCode
 - [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby)
 - [Endwise](https://github.com/kaiwood/vscode-endwise)
 - [RuboCop](https://github.com/rubocop-hq/rubocop)
-- [Prettier](https://github.com/prettier/plugin-ruby)
+- [Prettier Ruby Plugin](https://github.com/prettier/plugin-ruby)
 
 # Global Config
 
@@ -32,19 +39,27 @@ Here's what I've added in my settings.json:
   },
   "ruby.format": "rubocop",
   "[ruby]": {
-    // "editor.defaultFormatter": "misogi.ruby-rubocop"
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   }
 }
 ```
 > Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
 
-## Endwise
+## [Ruby](https://github.com/rubyide/vscode-ruby)
+
+Detects Ruby environment and provides linting and formatting support via RuboCop and/or Prettier (more available). Install from the marketplace and you are good to go!
+
+## [VSCode Ruby](https://github.com/rubyide/vscode-ruby)
+
+> Copied from [VSCode Ruby description](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby)
+
+This extension provides improved syntax highlighting, language configuration, and snippets to Ruby and ERB files within Visual Studio Code. It is meant to be used alongside the Ruby extension. This extension is listed as a dependency for the Ruby extension and does not need to be installed independently
+
+## [Endwise](https://github.com/kaiwood/vscode-endwise)
+
 Automatically adds the "end" keyword wherever it is needed. Just install from the marketplace and you are good to go!
 
-# Local Project Config
-
-## Prettier Ruby Plugin
+## [Prettier Ruby Plugin](https://github.com/prettier/plugin-ruby)
 
 Formatter that can be used in place of or in conjunction with RuboCop
 
@@ -53,18 +68,8 @@ Install via CLI:
 ```
 gem install 'prettier'
 ```
-OR
 
-Add to Gemfile:
-```
-gem 'prettier'
-```
-...then execute `bundle`
-
-Run Prettier with configured `Format Document` command or execute:
-```
-bundle exec rbprettier --write '**/*'
-```
+Run Prettier with configured `Format Document` command
 
 ### Usage with RuboCop
 
@@ -90,7 +95,7 @@ inherit_from:
 
 # Have not figured out:
 
-## RuboCop
+## [RuboCop](https://github.com/rubocop-hq/rubocop)
 
 RuboCop is a **highly** opinionated formatter. The autocorrect is incredibly powerful, I definitely need to do more research on setting up its config files before I feel comfortable implementing it.
 
@@ -148,8 +153,8 @@ require: rubocop-rails
 
 
 # Content Notes
-- [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
-- [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
+- [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) recommended by [Stefon Simmons](https://github.com/stefonsimmons)
+- [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by [Stefon Simmons](https://github.com/stefonsimmons)
 - [Endwise](https://github.com/kaiwood/vscode-endwise) recommended by Malika Johnson
 - [RuboCop](https://github.com/rubocop-hq/rubocop) recommended by [Soleil Solomon](https://github.com/soleilyasmina)
 - scratch.rb code from [Prettier](https://github.com/prettier/plugin-ruby)
