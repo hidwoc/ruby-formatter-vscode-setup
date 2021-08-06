@@ -1,0 +1,12 @@
+GEM
+  specs:
+    prettier (1.6.1)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  prettier
+
+BUNDLED WITH
+   2.2.3
