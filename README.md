@@ -10,6 +10,8 @@ I have Ruby, VSCode Ruby, Endwise, Prettier Ruby Plugin and RuboCop installed in
 
 I'm keeping it enabled so that I can use it as a learning tool but if the squigglies get overwhelming, you can disable it and Prettier seems to run fine even without making any changes to the global config.
 
+Copy over the code from format_ruby.rb to test your formatter!
+
 # TODO
 
 - Table of Contents with links to sections
