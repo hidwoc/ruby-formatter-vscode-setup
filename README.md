@@ -2,6 +2,12 @@
 
 A repository tracking my Ruby formatting set up in VSCode
 
+# TODO
+
+- Table of Contents with links to sections
+- Add Ruby Section
+- Add VSCode Ruby Section
+
 # Installs
 
 ## From VSCode Marketplace
@@ -26,8 +32,8 @@ Here's what I've added in my settings.json:
   },
   "ruby.format": "rubocop",
   "[ruby]": {
-    "editor.defaultFormatter": "misogi.ruby-rubocop"
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "misogi.ruby-rubocop"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   }
 }
 ```
@@ -37,6 +43,52 @@ Here's what I've added in my settings.json:
 Automatically adds the "end" keyword wherever it is needed. Just install from the marketplace and you are good to go!
 
 # Local Project Config
+
+## Prettier Ruby Plugin
+
+Formatter that can be used in place of or in conjunction with RuboCop
+
+---
+Install via CLI:
+```
+gem install 'prettier'
+```
+OR
+
+Add to Gemfile:
+```
+gem 'prettier'
+```
+...then execute `bundle`
+
+Run Prettier with configured `Format Document` command or execute:
+```
+bundle exec rbprettier --write '**/*'
+```
+
+### Usage with RuboCop
+
+> Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
+
+RuboCop and Prettier for Ruby serve different purposes, but there is overlap with some of RuboCop's functionality.
+
+Prettier provides a RuboCop configuration file to disable the rules which clash. To enable, add the following config at the top of your project's `.rubocop.yml`:
+
+#### Ruby gem
+
+```ruby
+inherit_gem:
+  prettier: rubocop.yml
+```
+
+#### npm package
+
+```js
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+```
+
+# Have not figured out:
 
 ## RuboCop
 
@@ -94,49 +146,6 @@ Add to `.rubocop.yml`:
 require: rubocop-rails
 ```
 
-## Prettier Ruby Plugin
-
-Formatter that can be used in place of or in conjunction with RuboCop
-
----
-Install via CLI:
-```
-gem install 'prettier'
-```
-OR
-
-Add to Gemfile:
-```
-gem 'prettier'
-```
-...then execute `bundle`
-
-Run Prettier with configured `Format Document` command or execute:
-```
-bundle exec rbprettier --write '**/*'
-```
-
-### Usage with RuboCop
-
-> Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
-
-RuboCop and Prettier for Ruby serve different purposes, but there is overlap with some of RuboCop's functionality.
-
-Prettier provides a RuboCop configuration file to disable the rules which clash. To enable, add the following config at the top of your project's `.rubocop.yml`:
-
-#### Ruby gem
-
-```ruby
-inherit_gem:
-  prettier: rubocop.yml
-```
-
-#### npm package
-
-```js
-inherit_from:
-  - node_modules/@prettier/plugin-ruby/rubocop.yml
-```
 
 # Content Notes
 - [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
