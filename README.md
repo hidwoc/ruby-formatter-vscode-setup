@@ -31,7 +31,7 @@ Here's what I've added in my settings.json:
   }
 }
 ```
-Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
+> Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
 
 ## Local Project Config
 
@@ -100,6 +100,8 @@ bundle exec rbprettier --write '**/*'
 
 #### Usage with RuboCop
 
+> Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
+
 RuboCop and Prettier for Ruby serve different purposes, but there is overlap with some of RuboCop's functionality.
 
 Prettier provides a RuboCop configuration file to disable the rules which clash. To enable, add the following config at the top of your project's `.rubocop.yml`:
@@ -117,4 +119,10 @@ inherit_gem:
 inherit_from:
   - node_modules/@prettier/plugin-ruby/rubocop.yml
 ```
-Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
+
+## Content Notes
+- [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
+- [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmon
+- [Endwise](https://github.com/kaiwood/vscode-endwise) recommended by Malika Johnson
+- [RuboCop](https://github.com/rubocop-hq/rubocop) recommended by [Soleil Solomon](https://github.com/soleilyasmina)
+- scratch.rb code from [Prettier](https://github.com/prettier/plugin-ruby)
