@@ -6,7 +6,7 @@ A repository tracking my Ruby formatting set up in VSCode
 
 I have Ruby, VSCode Ruby, Endwise, Prettier Ruby Plugin and RuboCop installed in VSCode.
 
- I've added most of the recommended code from Ruby in settings.json but have chosen to set my Ruby default formatter to Prettier because I prefer its speed over RuboCop. RuboCop takes a full second to run and has **A LOT** of opinions - this is both helpful yet annoying. 
+ I've added most of the recommended code from [Ruby](https://github.com/rubyide/vscode-ruby) in settings.json but have chosen to set my Ruby default formatter to **Prettier** because I prefer its speed over RuboCop. RuboCop takes a full second to run and has **A LOT** of opinions - this is both helpful yet annoying. 
 
 I'm keeping it enabled so that I can use it as a learning tool but if the squigglies get overwhelming, you can disable it and Prettier seems to run fine even without making any changes to the global config.
 
