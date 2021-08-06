@@ -34,16 +34,13 @@ Here's what I've added in my settings.json:
 > Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
 
 ## Endwise
-Automatically adds the "end" keyword wherever it is needed.
-
----
-Just install from the marketplace and you are good to go!
+Automatically adds the "end" keyword wherever it is needed. Just install from the marketplace and you are good to go!
 
 # Local Project Config
 
 ## RuboCop
 
-RuboCop is a **highly** opinionated formatter. 
+RuboCop is a **highly** opinionated formatter. The autocorrect is incredibly powerful, I definitely need to do more research on setting up its config files before I feel comfortable implementing it.
 
 ---
 
@@ -99,7 +96,7 @@ require: rubocop-rails
 
 ## Prettier Ruby Plugin
 
-Formatter that can be used in place of or in conjunction with RuboCop.
+Formatter that can be used in place of or in conjunction with RuboCop
 
 ---
 Install via CLI:
