@@ -17,19 +17,14 @@ A repository tracking my Ruby formatting set up in VSCode.
 Here's what I've added in my settings.json:
 ```json
 {
-// "editor.formatOnSave": true, // optional, personally I don't like this
-  "ruby.useBundler": true, //run non-lint commands with bundle exec
-  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
   "ruby.lint": {
     "rubocop": {
-      "useBundler": true // enable rubocop via bundler
+      "useBundler": true
     },
-    // Reek is another linter. I'm not sure if I want this yet
-    // "reek": {
-    //   "useBundler": true // enable reek via bundler
-    // }
   },
-  "ruby.format": "rubocop", // use rubocop for formatting
+  "ruby.format": "rubocop",
   "[ruby]": {
     "editor.defaultFormatter": "misogi.ruby-rubocop"
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
