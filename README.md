@@ -1,10 +1,10 @@
 # Ruby VSCode Setup
 
-A repository tracking my Ruby formatting set up in VSCode.
+A repository tracking my Ruby formatting set up in VSCode
 
-## Installs
+# Installs
 
-### From VSCode Marketplace
+## From VSCode Marketplace
 
 - [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby)
 - [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby)
@@ -12,7 +12,7 @@ A repository tracking my Ruby formatting set up in VSCode.
 - [RuboCop](https://github.com/rubocop-hq/rubocop)
 - [Prettier](https://github.com/prettier/plugin-ruby)
 
-## Global Config
+# Global Config
 
 Here's what I've added in my settings.json:
 ```json
@@ -33,47 +33,59 @@ Here's what I've added in my settings.json:
 ```
 > Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
 
-## Local Project Config
+## Endwise
+Automatically adds the "end" keyword wherever it is needed.
 
-### RuboCop
+---
+Just install from the marketplace and you are good to go!
 
-Install **RuboCop** via CLI:
+# Local Project Config
+
+## RuboCop
+
+RuboCop is a **highly** opinionated formatter. 
+
+---
+
+Install via CLI:
 
 ```
 gem install rubocop
 ```
 
-Or add to Gemfile:
+OR
+
+Add to Gemfile:
 ```
 gem 'rubocop', require: false
 ```
 
-Then execute `bundle`
+...then execute `bundle`
 
-Run rubocop with configured `Format Document` command or execute:
+Run RoboCop with configured `Format Document` command or execute:
 ```
 rubocop
 ```
 
 ### RuboCop-Rails Extension
-1. Install
 
-In CLI: 
+---
+
+Install via CLI: 
 
 ```
 gem install rubocop-rails
 ```
 
-  OR
+OR
 
 Add to Gemfile: 
 ```
 gem 'rubocop-rails'
 ```
+...then execute `bundle`
 
-2. Configure RuboCop to load the Rails extension
-
-In CLI: 
+Configure RuboCop to load the Rails extension in CLI: 
 ```
 rubocop --require rubocop-rails
 ```
@@ -85,20 +97,29 @@ Add to `.rubocop.yml`:
 require: rubocop-rails
 ```
 
-### Prettier Ruby Plugin
+## Prettier Ruby Plugin
+
+Formatter that can be used in place of or in conjunction with RuboCop.
+
+---
+Install via CLI:
+```
+gem install 'prettier'
+```
+OR
 
 Add to Gemfile:
 ```
 gem 'prettier'
 ```
-Then execute `bundle`
+...then execute `bundle`
 
 Run Prettier with configured `Format Document` command or execute:
 ```
 bundle exec rbprettier --write '**/*'
 ```
 
-#### Usage with RuboCop
+### Usage with RuboCop
 
 > Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
 
@@ -106,23 +127,23 @@ RuboCop and Prettier for Ruby serve different purposes, but there is overlap wit
 
 Prettier provides a RuboCop configuration file to disable the rules which clash. To enable, add the following config at the top of your project's `.rubocop.yml`:
 
-##### Ruby gem
+#### Ruby gem
 
 ```ruby
 inherit_gem:
   prettier: rubocop.yml
 ```
 
-##### npm package
+#### npm package
 
 ```js
 inherit_from:
   - node_modules/@prettier/plugin-ruby/rubocop.yml
 ```
 
-## Content Notes
+# Content Notes
 - [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
-- [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmon
+- [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by Stefon Simmons
 - [Endwise](https://github.com/kaiwood/vscode-endwise) recommended by Malika Johnson
 - [RuboCop](https://github.com/rubocop-hq/rubocop) recommended by [Soleil Solomon](https://github.com/soleilyasmina)
 - scratch.rb code from [Prettier](https://github.com/prettier/plugin-ruby)
