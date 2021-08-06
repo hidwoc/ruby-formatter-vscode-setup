@@ -2,6 +2,20 @@
 
 A repository tracking my Ruby formatting set up in VSCode
 
+# Table of Contents
+
+1. [Summary](#summary)
+2. [Installs](#installs)
+3. [Global Config](#global-config)
+4. [Ruby](#ruby)
+5. [Endwise](#endwise)
+6. [Prettier Ruby Plugin](#prettier-ruby-plugin)
+7. [Have Not Figured Out](#have-not-figured-out)
+    * [RuboCop](#rubocop)
+    * [RuboCop-Rails Extension](#rubocop-rails-extension)
+8. [Content Notes](#content-notes)
+9. [TODO](#todo)
+
 # Summary
 
 I have Ruby, VSCode Ruby, Endwise, Prettier Ruby Plugin and RuboCop installed in VSCode.
@@ -12,20 +26,18 @@ I'm keeping it enabled so that I can use it as a learning tool but if the squigg
 
 Copy over the code from format_ruby.rb to test your formatter!
 
-# TODO
 
-- Table of Contents with links to sections
-- Config RuboCop to ignore certain warnings
+
 
 # Installs
 
-## From VSCode Marketplace
+> From VSCode Marketplace
 
 - [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby)
 - [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby)
 - [Endwise](https://github.com/kaiwood/vscode-endwise)
-- [RuboCop](https://github.com/rubocop-hq/rubocop)
 - [Prettier Ruby Plugin](https://github.com/prettier/plugin-ruby)
+- (Optional) [RuboCop](https://github.com/rubocop-hq/rubocop)
 
 # Global Config
 
@@ -51,7 +63,7 @@ Here's what I've added in my settings.json:
 
 Detects Ruby environment and provides linting and formatting support via RuboCop and/or Prettier (more available). Install from the marketplace and you are good to go!
 
-## [VSCode Ruby](https://github.com/rubyide/vscode-ruby)
+### [VSCode Ruby](https://github.com/rubyide/vscode-ruby)
 
 > Copied from [VSCode Ruby description](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby)
 
@@ -123,7 +135,7 @@ Run RoboCop with configured `Format Document` command or execute:
 rubocop
 ```
 
-### RuboCop-Rails Extension
+## RuboCop-Rails Extension
 
 ---
 
@@ -159,4 +171,8 @@ require: rubocop-rails
 - [VSCode Ruby by Stafford Brunk](https://github.com/rubyide/vscode-ruby) recommended by [Stefon Simmons](https://github.com/stefonsimmons)
 - [Endwise](https://github.com/kaiwood/vscode-endwise) recommended by Malika Johnson
 - [RuboCop](https://github.com/rubocop-hq/rubocop) recommended by [Soleil Solomon](https://github.com/soleilyasmina)
-- scratch.rb code from [Prettier](https://github.com/prettier/plugin-ruby)
+- format_ruby.rb code from [Prettier](https://github.com/prettier/plugin-ruby)
+
+# TODO
+
+- Config RuboCop to ignore certain warnings
