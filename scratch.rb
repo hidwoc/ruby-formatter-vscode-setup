@@ -14,7 +14,7 @@ d=[30644250780,9003106878,
                  puts
                   }
 
-
+                  
 # After formatting, the code above should match the code below:
 d = [
   30_644_250_780,
