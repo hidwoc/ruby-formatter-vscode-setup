@@ -59,7 +59,7 @@ Here's what I've added in my settings.json:
 ```
 > Most of this can be found in the [Ruby by Peng Lv](https://github.com/rubyide/vscode-ruby) documentation
 
-## [Ruby](https://github.com/rubyide/vscode-ruby)
+# [Ruby](https://github.com/rubyide/vscode-ruby)
 
 Detects Ruby environment and provides linting and formatting support via RuboCop and/or Prettier (more available). Install from the marketplace and you are good to go!
 
@@ -69,23 +69,27 @@ Detects Ruby environment and provides linting and formatting support via RuboCop
 
 This extension provides improved syntax highlighting, language configuration, and snippets to Ruby and ERB files within Visual Studio Code. It is meant to be used alongside the Ruby extension. This extension is listed as a dependency for the Ruby extension and does not need to be installed independently
 
-## [Endwise](https://github.com/kaiwood/vscode-endwise)
+# [Endwise](https://github.com/kaiwood/vscode-endwise)
 
 Automatically adds the "end" keyword wherever it is needed. Just install from the marketplace and you are good to go!
 
-## [Prettier Ruby Plugin](https://github.com/prettier/plugin-ruby)
+# [Prettier Ruby Plugin](https://github.com/prettier/plugin-ruby)
 
 Formatter that can be used in place of or in conjunction with RuboCop
 
 ---
 Install via CLI:
 ```
-gem install 'prettier'
+gem install prettier
+```
+
+```
+npm install --save-dev prettier @prettier/plugin-ruby
 ```
 
 Run Prettier with configured `Format Document` command
 
-### Usage with RuboCop
+## Usage with RuboCop
 
 > Copied from [Prettier](https://github.com/prettier/plugin-ruby) for possible implementation later
 
@@ -93,14 +97,14 @@ RuboCop and Prettier for Ruby serve different purposes, but there is overlap wit
 
 Prettier provides a RuboCop configuration file to disable the rules which clash. To enable, add the following config at the top of your project's `.rubocop.yml`:
 
-#### Ruby gem
+### Ruby gem
 
 ```ruby
 inherit_gem:
   prettier: rubocop.yml
 ```
 
-#### npm package
+### npm package
 
 ```js
 inherit_from:
